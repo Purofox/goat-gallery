@@ -1,0 +1,105 @@
+{{#> layouts/base }}
+    {{#*inline "content-block"}}
+        {{> includes/header}}
+
+        <div class="main">
+        <ul class="mobile-breadcrumbs">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Решения</a></li>
+            <li><span>Натуральный камень</span></li>
+        </ul>
+
+        <div class="container row">
+            {{> includes/breadcrumb}}
+            <div class="right-column">
+              <div class="head-block">
+                  <h1>Название изделия</h1>
+                  <div class="stone-color">#0410827</div>
+              </div>
+              <div class="row">
+                <div class="product-banner" data-aos="fade-up" data-aos-delay="200" data-aos-offset="100">
+                  <a href="../../media/product-img.png" data-fancybox="images">
+                      <img src="../../media/product-img.png" alt="">
+                  </a>
+                  <div class="radiant-material rellax" data-rellax-speed="-10"></div>
+                </div>
+                <div class="characteristic" data-aos="fade-up" data-aos-delay="400" data-aos-offset="100">
+                  <div class="characteristic__block">
+                    <div class="characteristic__title">Применение</div>
+                      <div class="characteristic__row">
+                          <ul class="characteristic__list">
+                            <li>Интерьер</li>
+                            <li>Фасад</li>
+                            <li>Стены</li>
+                            <li>Полы (повышенная прочность)</li>
+                          </ul>
+                          <ul class="characteristic__list">
+                            <li>Полы</li>
+                            <li>Скульптура</li>
+                            <li>Особенно прочный</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="characteristic__block">
+                    <div class="characteristic__title">Обработка поверхности</div>
+                      <div class="characteristic__row">
+                          <ul class="characteristic__list">
+                            <li>Полированная</li>
+                            <li>Бучардированая</li>
+                            <li>Термообработка</li>
+                            <li>Шлифованная</li>
+                          </ul>
+                          <ul class="characteristic__list">
+                            <li>Пескоструйная</li>
+                            <li>Скол</li>
+                            <li>Бороздование</li>
+                            <li>Брашировние</li>
+                          </ul>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="stone-description" data-aos="fade-up" data-aos-delay="300" data-aos-offset="100">Камень — идеально подходит для облицовки бассейнов в силу своих гидроизоляционных свойств и долговечности. Наиболее широко в облицовке современных бассейнов используются такие породы натурального камня, как мрамор и гранит. Однако допускается применение и других видов натурального камня, которые станут не менее оригинальным решением для облицовки.</div>
+            </div>
+        </div>
+
+        <div class="center-container center-container--margin">
+            <h2 class="marker" data-aos="gdp-slide-in-h2">
+              <span>Похожие изделия</span>
+            </h2>
+            <div class="simple-gallery">
+                <div class="simple-gallery__item" data-aos="fade-up" data-aos-delay="50" data-aos-offset="100">
+                    <img src="../../media/products/1.png" alt="">
+                </div>
+                <div class="simple-gallery__item" data-aos="fade-up" data-aos-delay="100" data-aos-offset="100">
+                    <img src="../../media/products/2.png" alt="">
+                </div>
+                <div class="simple-gallery__item" data-aos="fade-up" data-aos-delay="150" data-aos-offset="100">
+                    <img src="../../media/products/3.png" alt="">
+                </div>
+                <div class="simple-gallery__item" data-aos="fade-up" data-aos-delay="200" data-aos-offset="100">
+                    <img src="../../media/products/4.png" alt="">
+                </div>
+                <div class="simple-gallery__item" data-aos="fade-up" data-aos-delay="250" data-aos-offset="100">
+                    <img src="../../media/products/5.png" alt="">
+                </div>
+                <div class="simple-gallery__item" data-aos="fade-up" data-aos-delay="300" data-aos-offset="100">
+                    <img src="../../media/products/6.png" alt="">
+                </div>
+            </div>
+
+            <a href="#" class="btn-link btn-link--small hidden-xs">
+                <span>Показать еще</span>
+            </a>
+        </div>
+
+        <div class="center-container center-container--margin">
+            <h2 class="marker" data-aos="gdp-slide-in-h2">
+              <span>Название изделия в проектах</span>
+            </h2>
+            {{> includes/projects}}
+        </div>
+    </div>
+
+    {{/inline}}
+{{/layouts/base}}

@@ -1,0 +1,314 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+
+.parallax-slider {
+  width: 100%;
+}
+
+.parallax-slider__item {
+  background-size: cover;
+  height: 903px;
+  position: relative;
+  width: 100%;
+
+  @include xs {
+    height: 375px;
+  }
+
+  @include devices {
+    height: 500px;
+    margin-bottom: 0;
+  }
+}
+
+.radiant-circle {
+  background: $radial-gradient;
+  bottom: -155px;
+  height: 900px;
+  left: 200px;
+  opacity: .25;
+  position: absolute;
+  width: 900px;
+  z-index: -1;
+
+  @include devices {
+    display: none;
+  }
+
+  @include laptop {
+    bottom: -50px;
+    height: 700px;
+    width: 700px;
+  }
+}
+
+.banner-header {
+  color: $light-grey;
+  font-family: $montserrat;
+  font-size: 96px;
+  font-weight: 200;
+  left: 144px;
+  margin: 0;
+  max-width: 780px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include xs {
+    left: 20px;
+  }
+
+  @include devices {
+    font-size: 32px;
+    line-height: 39px;
+  }
+
+  @include laptop {
+    font-size: 72px;
+  }
+
+  .timestamp {
+    color: inherit;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 59px;
+    margin-bottom: 146px;
+
+    @include devices {
+      display: none;
+    }
+  }
+
+  h1 {
+    color: inherit;
+  }
+}
+
+.slider-text__row-container {
+  .right-column {
+    margin-right: 100px;
+
+    @include devices {
+      max-width: 66vw;
+      width: 100%;
+    }
+
+    @include xs {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+}
+
+.slider-text {
+  align-items: center;
+  display: grid;
+  grid-column-gap: 100px;
+  grid-template-areas:
+    'before-slider slider'
+    'after-slider slider';
+  grid-template-columns: 1fr 1fr;
+
+  @include devices {
+    grid-template-areas:
+      'before-slider'
+      'slider'
+      'after-slider';
+    grid-template-columns: 1fr;
+  }
+
+  .slider {
+    overflow: hidden;
+    width: 100%;
+
+    @include devices {
+      max-width: 100%;
+    }
+  }
+
+  .example-slider {
+    margin: 0;
+    max-width: 680px;
+    width: 100%;
+
+    @include devices {
+      margin: 0 auto;
+      max-width: 576px;
+      padding: 0;
+    }
+  }
+
+  .before-slider {
+    grid-area: before-slider;
+  }
+
+  .slider {
+    grid-area: slider;
+  }
+
+  .after-slider {
+    grid-area: after-slider;
+  }
+}
+
+.before-slider {
+  p {
+    margin-bottom: 50px;
+
+    @include devices {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.after-slider {
+  p {
+    margin-bottom: 50px;
+
+    @include devices {
+      margin-bottom: 20px;
+    }
+  }
+
+  p:last-of-type:not(:first-of-type) {
+    margin-bottom: 0;
+  }
+}
+
+.text-area {
+  max-width: 724px;
+
+  @include xs {
+    max-width: 100%;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  @include tablet {
+    max-width: 95%;
+    width: 100%;
+  }
+
+  @include devices {
+    max-width: 100%;
+  }
+
+  p {
+    padding-left: 0;
+  }
+}
+
+.news-detail-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: minmax(1fr, 480px) minmax(1fr, 720px);
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+
+  @include devices {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+.news-detail-grid__item {
+  grid-column: auto / span 2;
+
+  @include devices {
+    grid-column: auto / span 1;
+  }
+
+  &:nth-of-type(3n) {
+    @include devices {
+      grid-column: 1 / 3;
+      grid-row: 2/4;
+    }
+  }
+
+  &:nth-of-type(4n) {
+    grid-column: 1/4;
+
+    @include devices {
+      grid-column: auto / span 1;
+    }
+  }
+
+  &:nth-of-type(5n) {
+    grid-column: 4/7;
+
+    @include devices {
+      grid-column: auto / span 1;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.center-text-quote {
+  color: $logo-color;
+  margin: 0 auto;
+  max-width: 860px;
+  position: relative;
+  text-align: center;
+  width: 44.7%;
+
+  @include xs {
+    width: 78%;
+  }
+
+  &::before,
+  &::after {
+    background-color: $logo-color;
+    content: '';
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    width: 325px;
+
+    @include xs {
+      display: none;
+    }
+  }
+
+  &::before {
+    left: -105px;
+    transform: translateY(-50%) translateX(-100%);
+  }
+
+  &::after {
+    right: -105px;
+    transform: translateY(-50%) translateX(100%);
+  }
+}
+
+.center-texts {
+  margin: 0 auto;
+  max-width: 1290px;
+  width: 67.1%;
+
+  @include xs {
+    max-width: 100%;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  @include tablet {
+    max-width: 95%;
+    width: 100%;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 50px;
+
+    @include devices {
+      margin-bottom: 20px;
+    }
+  }
+}

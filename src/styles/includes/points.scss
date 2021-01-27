@@ -1,0 +1,227 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+
+.point {
+  background: url(~media/point.svg) no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  height: 1.563vw;
+  position: absolute;
+  width: 1.563vw;
+
+  @include devices {
+    display: none;
+  }
+
+  &.left {
+    left: 28.4%;
+    top: 42%;
+  }
+
+  &.right {
+    right: 18.6%;
+    top: 31%;
+  }
+
+  &.bottom {
+    bottom: 13%;
+    right: 44.3%;
+  }
+
+  &.top {
+    right: 44.3%;
+    top: 13%;
+  }
+}
+
+.tooltip {
+  background: rgba(15%, 15%, 15%, .95);
+  display: none;
+  padding: 1.042vw;
+  position: absolute;
+  top: -15px;
+  width: 17.917vw;
+  z-index: 3;
+
+  @include devices {
+    padding: 20px;
+    width: 344px;
+  }
+}
+
+.tooltip__header {
+  color: $logo-color;
+  cursor: initial;
+  font: 1.25vw $montserrat;
+  margin-bottom: 10px;
+
+  @include devices {
+    font-size: 24px;
+  }
+}
+
+.tooltip__description {
+  cursor: initial;
+  font-size: .729vw;
+  line-height: 1.094vw;
+  overflow: auto;
+  user-select: text;
+
+  @include devices {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  @include tablet {
+    max-height: 100px;
+  }
+}
+
+.left .tooltip {
+  left: 4.167vw;
+
+  &::before {
+    border: 1.563vw solid transparent;
+    border-right-color: rgba(15%, 15%, 15%, .95);
+    content: '';
+    left: -3.125vw;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.right .tooltip {
+  right: 4.167vw;
+
+  &::after {
+    border: 1.563vw solid transparent;
+    border-left-color: rgba(15%, 15%, 15%, .95);
+    content: '';
+    position: absolute;
+    right: -3.125vw;
+    top: 0;
+  }
+}
+
+.bottom .tooltip {
+  bottom: 3.385vw;
+  left: -2.865vw;
+  top: auto;
+
+  &::after {
+    border: 2.604vw solid transparent;
+    border-top-color: rgba(15%, 15%, 15%, .95);
+    content: '';
+    position: absolute;
+  }
+}
+
+.top .tooltip {
+  left: -1.823vw;
+  top: 3.385vw;
+
+  &::after {
+    border: 1.563vw solid transparent;
+    border-bottom-color: rgba(15%, 15%, 15%, .95);
+    content: '';
+    position: absolute;
+    top: -3.125vw;
+  }
+}
+
+
+
+.points-list {
+  color: $logo-color;
+  display: none;
+  font: .938vw $montserrat;
+  line-height: 1.146vw;
+
+  @include devices {
+    display: block;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.point-modal {
+  background: $body-color;
+  display: none;
+  height: 100%;
+  overflow: auto;
+  padding: 1.563vw 1.042vw 1.042vw;
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
+
+  @include devices {
+    padding: 30px 20px 20px;
+  }
+
+  @include tablet {
+    left: 0;
+    margin: auto;
+    padding: 30px 50px;
+    right: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.point-modal__header {
+  color: $logo-color;
+  font: 1.146vw $montserrat;
+  justify-content: space-between;
+  margin-bottom: 1.302vw;
+
+  @include devices {
+    font: 22px $montserrat;
+    margin-bottom: 25px;
+  }
+}
+
+.point-modal__description {
+  font-size: .833vw;
+  line-height: 1.406vw;
+  margin-bottom: 1.042vw;
+
+  @include devices {
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 20px;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  background: url(~media/slider-arrow.svg);
+  cursor: pointer;
+  display: block;
+  height: 3.125vw;
+  position: absolute;
+  top: calc(50% - 1.563vw);
+  width: 1.563vw;
+  z-index: 2;
+
+  @include devices {
+    height: 60px;
+    top: calc(50% - 30px);
+    width: 30px;
+  }
+
+  @include xs {
+    display: none;
+  }
+}
+
+.slick-prev {
+  left: 1.667vw;
+}
+
+.slick-next {
+  right: 1.667vw;
+  transform: rotate(180deg);
+}

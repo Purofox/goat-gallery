@@ -1,0 +1,72 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+@import 'styles/includes/footers-menu';
+
+footer {
+  border-top: 1px solid transparent;
+  flex: 0 0 auto;
+}
+
+.footer-coopyright {
+  border-top: 1px solid $transparent-white;
+  color: rgba(221, 221, 221, .4);
+  font-size: .729vw;
+  justify-content: flex-end;
+  padding: 1.563vw 0;
+
+  @include devices {
+    font-size: 14px;
+    padding: 20px 0 16px;
+  }
+
+  a {
+    color: rgba(221, 221, 221, .4);
+
+    @include tablet {
+      margin-right: 10px;
+    }
+  }
+
+  .center-container {
+    @include devices {
+      align-items: center;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.copyright {
+  @include xs {
+    border-top: 1px solid $transparent-white;
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.documents {
+  @include xs {
+    text-align: center;
+
+    span {
+      display: block;
+      margin: 10px 0 20px;
+    }
+
+    a:first-child {
+      margin-right: 30px;
+    }
+  }
+}
+
+
+.footer-menu {
+  border-top: 1px solid $transparent-white;
+  padding: 4.167vw 0;
+
+  @include xs {
+    padding: 30px 20px;
+  }
+}
+

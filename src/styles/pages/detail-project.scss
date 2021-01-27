@@ -1,0 +1,167 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+
+.center-header {
+  color: $light-grey;
+  font-size: 5vw;
+  margin: 4.844vw 0 0 10.5vw;
+  max-width: 45.938vw;
+  text-transform: uppercase;
+
+  @include laptop {
+    font-size: 72px;
+    margin-left: 100px;
+  }
+
+  @include devices {
+    color: $white;
+    font-size: 28px;
+    font-weight: 300;
+    margin: 10px 0 0;
+    max-width: 287px;
+    text-transform: unset;
+  }
+
+  @include xs {
+    margin: 10px 0 0 20px;
+  }
+}
+
+.center-header::after {
+  background: $light-grey;
+  content: '';
+  display: block;
+  height: .052vw;
+  position: absolute;
+  right: 0;
+  top: 13.5vw;
+  width: 29%;
+
+  @include devices {
+    top: 30px;
+  }
+}
+
+.zoom-slider__item img {
+  width: 100%;
+}
+
+.white-dots {
+  bottom: 1.302vw;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  right: 0;
+
+  li {
+    margin-right: .781vw;
+
+    @include devices {
+      margin-right: 15px;
+    }
+  }
+
+  button {
+    background: $light-grey;
+    border: 1px solid $light-grey;
+    border-radius: 50%;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: .521vw;
+    outline: none;
+    padding: .26vw;
+    width: .521vw;
+
+    @include devices {
+      height: 10px;
+      padding: 5px;
+      width: 10px;
+    }
+  }
+}
+
+.white-dots li:last-child {
+  margin-right: 0;
+}
+
+.slick-active button {
+  background: $logo-color;
+  border: 1px solid $logo-color;
+}
+
+.description {
+  line-height: 1.615vw;
+  margin-top: 2.604vw;
+
+  @include devices {
+    line-height: 31px;
+    margin-top: 50px;
+  }
+}
+
+.point-container {
+  position: relative;
+}
+
+.material-grid {
+  display: grid;
+
+  @include xs {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10px;
+  }
+}
+
+.description {
+  @include xs {
+    padding: 0 20px;
+  }
+}
+
+.header-btn {
+  align-items: baseline;
+  justify-content: space-between;
+
+  .btn-link {
+    margin: 0;
+    width: 15.417vw;
+
+    @include devices {
+      width: 296px;
+    }
+  }
+}
+
+.btn-link {
+  @include xs {
+    margin: 20px 20px 0;
+  }
+}
+
+.material-item--text {
+  font-size: .833vw;
+
+  @include devices {
+    font-size: 16px;
+  }
+
+  @include xs {
+    display: none;
+  }
+}
+
+.material-item--mobile {
+  display: none;
+
+  @include devices {
+    display: block;
+    font-size: 16px;
+  }
+}

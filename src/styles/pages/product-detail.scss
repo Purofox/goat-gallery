@@ -1,0 +1,168 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+
+.head-block {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+
+  @include xs {
+    align-items: baseline;
+    flex-direction: column;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  @include tablet {
+    margin-bottom: 30px;
+    width: 85%;
+  }
+}
+
+.stone-color {
+  color: $logo-color;
+  font: 300 1.25vw $montserrat;
+
+  @include devices {
+    font-size: 16px;
+  }
+
+  @include xs {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+}
+
+.characteristic {
+  margin-left: 3.021vw;
+
+  @include devices {
+    margin-left: 0;
+    padding: 0 20px;
+  }
+}
+
+.characteristic__block {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.characteristic__list {
+  list-style: none;
+  margin: 1.042vw 0 2.604vw;
+  padding: 0;
+
+  @include devices {
+    margin: 15px 0 0;
+    width: 50%;
+
+    &:first-child {
+      margin-right: 50px;
+    }
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+
+    @include devices {
+      font-size: 14px;
+    }
+  }
+}
+
+.characteristic__row {
+  @include devices {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.characteristic__title {
+  border-bottom: 1px solid $logo-color;
+  color: $logo-color;
+  font-family: $montserrat;
+  padding: 0 2.083vw .521vw 0;
+
+  @include devices {
+    margin-top: 30px;
+  }
+}
+
+.stone-description {
+  line-height: 1.615vw;
+  margin-top: 2.604vw;
+  max-width: 60%;
+
+  @include devices {
+    line-height: 31px;
+    margin-top: 50px;
+    max-width: none;
+    padding: 0 20px;
+  }
+}
+
+.product-banner {
+  position: relative;
+  width: 44.792vw;
+
+  @include xs {
+    width: auto;
+  }
+
+  @include tablet {
+    width: 85%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.radiant-material {
+  background: $radial-gradient;
+  bottom: -6.25vw;
+  height: 32.135vw;
+  opacity: .25;
+  position: absolute;
+  right: -5.469vw;
+  width: 32.135vw;
+  z-index: -1;
+
+  @include devices {
+    display: none;
+  }
+
+}
+
+.simple-gallery {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  @include xs {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10px;
+  }
+}
+
+.simple-gallery__item {
+  overflow: hidden;
+}
+
+.simple-gallery__item img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: .5s;
+  width: 100%;
+}
+
+.simple-gallery__item:hover img {
+  transform: scale(1.1);
+  transition: .5s;
+}

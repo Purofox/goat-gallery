@@ -1,0 +1,189 @@
+{{#> layouts/base }}
+    {{#*inline "content-block"}}
+        {{> includes/header}}
+
+        <div class="main">
+            <ul class="mobile-breadcrumbs">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Решения</a></li>
+                <li><span>Натуральный камень</span></li>
+            </ul>
+            <div class="container row">
+                {{> includes/breadcrumb}}
+                <div class="right-column">
+                    <div class="parallax-banner">
+                        <h1 class="banner-header">Камень</h1>
+                        <img class="zoom-image" src="../../media/material-banner.png" alt="">
+                    </div>
+                    <div class="radiant-circle rellax" data-rellax-speed="-10"></div>
+                </div>
+            </div>
+            <div class="center-container center-container--margin">
+                <div class="header-block">
+                    <h2 class="marker" data-aos="gdp-slide-in-h2">
+                        <span>Натуральный камень</span>
+                    </h2>
+                    <a href="#" class="download hidden-xs"><i class="far fa-file-pdf"></i> Скачать каталог</a>
+                    <div class="show-filter visible-xs" role="button">
+                        <img src="../../media/material/detail.svg" alt="">
+                    </div>
+                </div>
+                <div class="filter">
+                    <div class="filter-header visible-xs">
+                        <h3>Фильтр</h3>
+                        <div class="close" role="button" aria-label="close">
+                            <img src="../../media/material/close.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="sticky-filler"></div>
+                    <div class="filter-wrapper" data-simplebar>
+                        <div class="filter-row" data-name="stoneType">
+                            <div class="label">Тип камня</div>
+                            <div class="property-wrapper">
+                                <div class="property" data-val="0" role="button" aria-pressed="false">Luxury Stone</div>
+                                <div class="property" data-val="1" role="button" aria-pressed="false">Гранит</div>
+                                <div class="property" data-val="2" role="button" aria-pressed="false">Известняк</div>
+                                <div class="property" data-val="3" role="button" aria-pressed="false">Кварц</div>
+                                <div class="property" data-val="4" role="button" aria-pressed="false">Кварцит</div>
+                                <div class="property" data-val="5" role="button" aria-pressed="false">Мрамор</div>
+                                <div class="property" data-val="6" role="button" aria-pressed="false">Оникс</div>
+                                <div class="property" data-val="7" role="button" aria-pressed="false">Сланец</div>
+                            </div>
+                        </div>
+                        <div class="filter-row" data-name="usage">
+                            <div class="label">Применение</div>
+                            <div class="property-wrapper">
+                                <div class="property" data-val="0" role="button" aria-pressed="false">Скульптура</div>
+                                <div class="property" data-val="1" role="button" aria-pressed="false">Особенно прочный
+                                </div>
+                                <div class="property" data-val="2" role="button" aria-pressed="false">Интерьер</div>
+                                <div class="property" data-val="3" role="button" aria-pressed="false">Фасад</div>
+                                <div class="property" data-val="4" role="button" aria-pressed="false">Стены</div>
+                                <div class="property" data-val="5" role="button" aria-pressed="false">Полы</div>
+                                <div class="property" data-val="6" role="button" aria-pressed="false">Полы(особо
+                                    прочные)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-row" data-name="color">
+                            <div class="label">Цвет</div>
+                            <div class="property-wrapper property-wrapper--colors">
+                                <div class="property property--color" data-val="#fff" role="button"
+                                     aria-pressed="false">Белый
+                                </div>
+                                <div class="property property--color" data-val="#bf9a85" role="button"
+                                     aria-pressed="false">Желтый
+                                </div>
+                                <div class="property property--color" data-val="#bf9a86" role="button"
+                                     aria-pressed="false">Розовый
+                                </div>
+                                <div class="property property--color" data-val="#bf9a87" role="button"
+                                     aria-pressed="false">Бежевый
+                                </div>
+                                <div class="property property--color" data-val="#bf9a88" role="button"
+                                     aria-pressed="false">Коричневый
+                                </div>
+                                <div class="property property--color" data-val="#bf9a89" role="button"
+                                     aria-pressed="false">Зеленый
+                                </div>
+                                <div class="property property--color" data-val="#bf9a77" role="button"
+                                     aria-pressed="false">Голубой
+                                </div>
+                                <div class="property property--color" data-val="#bf9a76" role="button"
+                                     aria-pressed="false">Синий
+                                </div>
+                                <div class="property property--color" data-val="#bf9a75" role="button"
+                                     aria-pressed="false">Оранжевый
+                                </div>
+                                <div class="property property--color" data-val="#bf9a74" role="button"
+                                     aria-pressed="false">Красный
+                                </div>
+                                <div class="property property--color" data-val="#bf9a73" role="button"
+                                     aria-pressed="false">Серый
+                                </div>
+                                <div class="property property--color" data-val="#000" role="button" data-color-white>
+                                    Черный
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-footer">
+                        <button class="apply">Применить</button>
+                        <button class="reset">Сбросить фильтр</button>
+                    </div>
+                </div>
+                <div class="filter-preview">
+                    <div class="center-container">
+                        <div class="row">
+                            <div class="info">
+
+                            </div>
+                            <div class="detail" role="button">
+                                <img src="../../media/material/detail.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sort-block row">
+                    <div class="selected">Подобрано <span class="total">1 500</span> материалов</div>
+                    <div class="quantity visible-xs">
+                        <span class="from">1</span>-<span class="to">36</span>
+                        из <span class="total">0</span>
+                    </div>
+                    <div class="sort-block__right-part row">
+                        <div class="show">
+                            <span>Показывать по</span>
+                            <div role="listbox" class="quantity-select">
+                                <div class="quantity-select__value">36</div>
+                                <div class="quantity-select__option-wrapper">
+                                    <div class="quantity-select__option selected"
+                                         aria-selected="true" role="option">
+                                        36
+                                    </div>
+                                    <div class="quantity-select__option" role="option">48</div>
+                                    <div class="quantity-select__option" role="option">60</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quantity hidden-xs">
+                            <span class="from">1</span>-<span class="to">36</span>
+                            из <span class="total">0</span>
+                        </div>
+                        <div class="arrows row">
+                            <div class="prev disabled">
+                                <img src="../../media/small-btn.svg" alt="">
+                            </div>
+                            <div class="next">
+                                <img src="../../media/small-btn.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="materials-grid"></div>
+                <div class="sort-block row">
+                    <div class="selected">Подобрано <span class="total">1 500</span> материалов</div>
+                    <div class="quantity visible-xs">
+                        <span class="from">1</span>-<span class="to">36</span>
+                        из <span class="total">0</span>
+                    </div>
+                    <div class="sort-block__right-part row">
+                        <div class="quantity hidden-xs">
+                            <span class="from">1</span>-<span class="to">36</span>
+                            из <span class="total">0</span>
+                        </div>
+                        <div class="arrows row">
+                            <div class="prev disabled">
+                                <img src="../../media/small-btn.svg" alt="">
+                            </div>
+                            <div class="next">
+                                <img src="../../media/small-btn.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="download visible-xs"><i class="far fa-file-pdf"></i> Скачать каталог</a>
+            </div>
+        </div>
+
+    {{/inline}}
+{{/layouts/base}}

@@ -1,0 +1,130 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+@import 'styles/helpers/fancy-import';
+
+.options-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @include devices {
+    display: none;
+  }
+}
+
+.options-item {
+  max-height: 16.042vw;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition-duration: .6s;
+    transition-timing-function: ease;
+    width: 100%;
+  }
+}
+
+.options-item:hover img {
+  transform: scale(1.1);
+  transition-duration: .6s;
+  transition-timing-function: ease;
+}
+
+.options-panel {
+  display: none;
+
+  @include devices {
+    display: block;
+  }
+}
+
+// .options-item:hover .option-info {
+//   opacity: 1;
+//   transition: .4s;
+// }
+
+.option-info {
+  background: rgba(0, 0, 0, .6);
+  bottom: 0;
+  font-size: 24px;
+  opacity: 0;
+  padding: 20px;
+  position: absolute;
+  transition: .3s;
+  width: 100%;
+
+  @include devices {
+    display: none;
+  }
+
+  .option-info__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    @include laptop {
+      margin-bottom: 6px;
+    }
+  }
+
+  .name {
+    @include laptop {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  .date {
+    font-size: 16px;
+
+    @include laptop {
+      display: none;
+    }
+  }
+
+  .option-info__description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 150%;
+
+    @include laptop {
+      font-size: 8.75px;
+      line-height: 150%;
+    }
+  }
+}
+
+.panel-heading {
+  background: rgba(0, 0, 0, .6);
+  color: $light-grey;
+  font-size: 22px;
+  line-height: 22px;
+  margin-top: 5px;
+  padding: 20px;
+  transition-duration: .5s;
+
+  &.in {
+    opacity: 0;
+  }
+}
+
+
+.panel-collapse {
+  background: rgba(0, 0, 0, .6);
+  display: none;
+  padding: 20px;
+}
+
+.panel-body h3 {
+  font-size: 22px;
+  padding: 0;
+
+  &::before {
+    content: none;
+  }
+}

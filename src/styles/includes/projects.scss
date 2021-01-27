@@ -1,0 +1,93 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+@import 'styles/helpers/fancy-import';
+
+.projects {
+  display: grid;
+  grid-gap: 1.042vw;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+
+  @include devices {
+    grid-gap: 20px;
+  }
+
+  @include xs {
+    display: none;
+  }
+}
+
+.projects__item {
+  position: relative;
+  transform: scale(1);
+  transition: .3s;
+}
+
+.projects__item::after {
+  box-shadow: 0 0 200px $black, 0 20px 60px $black;
+  content: '';
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity .3s ease-in-out;
+  width: 100%;
+  z-index: -1;
+}
+
+.projects__item img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.projects__name {
+  background: rgba(0, 0, 0, .6);
+  bottom: 0;
+  font-size: 1.25vw;
+  opacity: 0;
+  padding: 1.042vw;
+  position: absolute;
+  transition: .25s;
+  width: 100%;
+
+  @include xs {
+    bottom: 8px;
+  }
+
+  @include devices {
+    font-size: 16px;
+    opacity: 1;
+    padding: 10px 20px;
+  }
+}
+
+[data-aos^=fade][data-aos^=fade].projects__item.animate-hover {
+  transition-delay: 0s !important;
+}
+
+[data-aos^=fade][data-aos^=fade].projects__item:hover {
+  transform: scale(1.15);
+  transition: .25s cubic-bezier(.37, 0, .63, 1);
+  z-index: 2;
+
+  &::after {
+    opacity: 1;
+  }
+
+  .projects__name {
+    opacity: 1;
+  }
+}
+
+.btn-link--small {
+  margin: 2.604vw auto 0;
+  max-width: 13.021vw;
+
+  @include devices {
+    margin: 20px auto 0;
+    max-width: 250px;
+  }
+}

@@ -1,0 +1,146 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+
+.parallax-slider {
+  width: 100%;
+}
+
+.parallax-slider__item {
+  background-size: cover;
+  height: 47.031vw;
+  position: relative;
+  width: 100%;
+
+  @include xs {
+    height: 375px;
+  }
+
+  @include devices {
+    height: 500px;
+    margin-bottom: 0;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.radiant-circle {
+  background: $radial-gradient;
+  bottom: -8.073vw;
+  height: 46.875vw;
+  left: 10.417vw;
+  opacity: .25;
+  position: absolute;
+  width: 46.875vw;
+  z-index: -1;
+
+  @include devices {
+    display: none;
+  }
+
+  @include laptop {
+    bottom: -50px;
+    height: 700px;
+    width: 700px;
+  }
+}
+
+.banner-header {
+  color: $light-grey;
+  font-family: $montserrat;
+  font-size: 5vw;
+  font-weight: 200;
+  left: 7.5vw;
+  margin: 0;
+  max-width: 40.625vw;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include xs {
+    left: 20px;
+  }
+
+  @include devices {
+    font-size: 32px;
+    line-height: 39px;
+  }
+
+  @include laptop {
+    font-size: 72px;
+  }
+}
+
+.banner-header::before {
+  background: $light-grey;
+  content: '';
+  display: block;
+  height: .052vw;
+  position: absolute;
+  right: -100%;
+  top: 9.2vw;
+  width: 100%;
+
+  @include xs {
+    right: -134%;
+    top: 58px;
+    width: 70%;
+  }
+}
+
+.preview-text {
+  line-height: 1.615vw;
+  margin-bottom: 4.375vw;
+  max-width: 55.99vw;
+
+  @include devices {
+    line-height: 27px;
+    margin-bottom: 0;
+    max-width: none;
+  }
+
+  @include xs {
+    padding-left: 68px;
+  }
+}
+
+.text-area {
+  @include xs {
+    padding: 0 20px;
+  }
+
+  p {
+    margin-bottom: 3.125vw;
+  }
+}
+
+.text-area p:last-child {
+  margin-bottom: 0;
+}
+
+.text-area__title {
+  font: 200 1.875vw $montserrat;
+
+  @include devices {
+    font-size: 20px;
+    margin: 30px 0 15px;
+  }
+}
+
+.mining-detail .example-slider {
+  @include devices {
+    margin-top: 50px;
+  }
+}
+
+.short-title {
+  max-width: 53.125vw;
+
+  @include devices {
+    max-width: none;
+  }
+}

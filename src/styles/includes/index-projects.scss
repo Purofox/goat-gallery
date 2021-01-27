@@ -1,0 +1,131 @@
+@import 'styles/helpers/colors';
+@import 'styles/helpers/breakpoints';
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 83px 0 5.208vw;
+
+  @include devices {
+    padding: 83px 0 50px;
+  }
+
+  .button::after {
+    height: 35px;
+    width: 35px;
+  }
+
+  .button {
+    align-self: center;
+    justify-self: end;
+    line-height: 2.604vw;
+    margin-bottom: 54px;
+    padding: 0 33px;
+
+    @include devices {
+      grid-column: 1 / span 2;
+      grid-row: 3;
+      justify-self: stretch;
+      line-height: 3.2;
+      margin: 0 20px;
+      padding: 0;
+      text-align: center;
+
+      &::after {
+        height: 53px;
+        width: 53px;
+      }
+    }
+  }
+}
+
+.projects-slider {
+  display: none;
+  grid-column: 1 / span 2;
+
+  @include devices {
+    display: block;
+  }
+}
+
+.projects-slider-item-wrapper {
+  text-align: center;
+}
+
+.projects-slider-item {
+  display: inline-block;
+  position: relative;
+
+  &__name {
+    background: rgba(0, 0, 0, .6);
+    bottom: 0;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 1.042vw;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-column: 1 / span 2;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include devices {
+    display: none;
+  }
+}
+
+.projects-item {
+  display: block;
+  filter: grayscale(100%);
+  line-height: 0;
+  overflow: hidden;
+  transition: .3s;
+
+  @include devices {
+    filter: none;
+  }
+}
+
+.projects-item__wrapper {
+  position: relative;
+
+  &:hover {
+    z-index: 1;
+  }
+}
+
+.projects-item:hover .projects-item__name {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects-item:hover {
+  filter: grayscale(0);
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.projects-item__name {
+  background: rgba(0, 0, 0, .6);
+  bottom: 0;
+  font-size: 1.25vw;
+  justify-content: space-between;
+  line-height: 1.25vw;
+  max-width: 100%;
+  opacity: 0;
+  padding: 10px 1.042vw;
+  position: absolute;
+  transform: translateY(100%);
+  transition: .3s;
+  width: 100%;
+
+  @include devices {
+    font-size: 1rem;
+  }
+}
+

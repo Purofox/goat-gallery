@@ -1,0 +1,126 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+
+.arrows img {
+  height: 1.042vw;
+  width: .521vw;
+
+  @include devices {
+    height: 20px;
+    width: 10px;
+  }
+}
+
+.arrows .prev {
+  cursor: pointer;
+  height: 1.042vw;
+  margin: 0 2.188vw 0 1.667vw;
+  transform: rotate(180deg);
+
+  @include devices {
+    height: 20px;
+    margin: 0 42px 0 32px;
+  }
+
+  @include tablet {
+    margin: 0 20px;
+  }
+}
+
+.arrows .next {
+  cursor: pointer;
+  height: 1.042vw;
+
+  @include devices {
+    height: 20px;
+  }
+}
+
+.arrows .disabled {
+  opacity: .4;
+}
+
+.show-btn {
+  background: transparent;
+  border: 1px solid $logo-color;
+  color: $logo-color;
+  height: 2.604vw;
+  padding: 0;
+  text-align: center;
+  width: 11.771vw;
+
+  @include xs {
+    height: 50px;
+    width: 226px;
+  }
+
+  @include tablet {
+    height: 50px;
+    width: 200px;
+  }
+}
+
+.disabled {
+  opacity: .4;
+  pointer-events: none;
+}
+
+.show-btn i {
+  margin-right: .26vw;
+
+  @include devices {
+    margin-right: 5px;
+  }
+}
+
+.sort-block__right-part {
+  align-items: center;
+
+  @include xs {
+    justify-content: space-between;
+    margin-top: 8px;
+    width: 100%;
+  }
+}
+
+.sort-block {
+  align-items: center;
+  color: $transparent-light-grey;
+  justify-content: space-between;
+  margin-bottom: .833vw;
+
+  @include tablet {
+    font-size: 14px;
+    margin: 30px 0;
+  }
+
+  @include xs {
+    font-size: 14px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+}
+
+.bottom-info {
+  color: $transparent-light-grey;
+  justify-content: space-between;
+  margin-top: 2.604vw;
+
+  @include xs {
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+}
+
+.mobile-pagination {
+  display: none;
+  width: 100%;
+
+  @include xs {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+}

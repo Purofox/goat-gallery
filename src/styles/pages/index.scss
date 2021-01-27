@@ -1,0 +1,464 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+
+/*Test for parallax*/
+//html,
+//body {
+//  font-size: 18px;
+//  height: 100%;
+//  margin: 0;
+//  overflow: hidden;
+//}
+
+.header {
+  position: fixed;
+  z-index: 11;
+}
+
+.parallax {
+  background-size: cover;
+  box-sizing: border-box;
+  height: 130vh;
+  margin-bottom: -130vh;
+  /* Since the parallax elements still consume space, we set the margin to undo
+     the height of this parallax element making it essentially consume 0 space.
+  */
+  width: 100%;
+}
+
+.viewport {
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+.cloud-front {
+  display: block;
+}
+
+/*Test for parallax*/
+
+
+.mountains {
+  background: linear-gradient(180deg, rgb(18, 18, 18) 0%, rgb(54, 54, 54) 100%);
+  height: 83.8vw;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+
+  img {
+    width: 100%;
+    will-change: transform;
+  }
+}
+
+.cloud-holder {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  will-change: transform;
+
+  &__second {
+    bottom: 256px;
+    z-index: 3;
+  }
+}
+
+.mount-first {
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.mount-second {
+  bottom: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.mount-third {
+  bottom: 0;
+  position: absolute;
+  z-index: 4;
+}
+
+
+.cloud__third {
+  bottom: -1px;
+  left: 0;
+  position: absolute;
+  z-index: 5;
+}
+
+.house {
+  display: flex;
+  flex-direction: column;
+  margin-top: -1px;
+
+  h1 {
+    color: $logo-color;
+    display: block;
+    font: 48px Montserrat;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .8s;
+
+    @include xs {
+      font-size: 28px;
+    }
+  }
+
+  .header-wrapper {
+    margin: 59px 0;
+    position: relative;
+  }
+
+  h1::before,
+  h1::after {
+    background: $logo-color;
+    content: '';
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: 60%;
+    transition: all .8s linear;
+    width: 0;
+  }
+
+  h1::before {
+    left: -10%;
+  }
+
+  h1::after {
+    right: -10%;
+  }
+
+  [data-aos='gdp-slide-in-h1'] {
+    height: 0;
+    margin-top: 48px;
+
+    @include xs {
+      margin-top: 28px;
+    }
+  }
+
+  .aos-animate[data-aos='gdp-slide-in-h1'] {
+    height: 48px;
+    margin-top: 0;
+
+    @include xs {
+      height: 28px;
+    }
+  }
+
+  .aos-animate[data-aos='gdp-slide-in-h1']::before {
+    left: -40%;
+    width: 30%;
+  }
+
+  .aos-animate[data-aos='gdp-slide-in-h1']::after {
+    right: -40%;
+    width: 30%;
+  }
+
+  p {
+    color: $dark;
+    font: 300 18px Roboto;
+    line-height: 170%;
+    margin-bottom: 149px;
+    max-width: 70%;
+  }
+}
+
+.header-block {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  @include devices {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  h2 {
+    max-width: 100%;
+
+    @include xs {
+      padding-left: 50px;
+    }
+  }
+}
+
+.header-block .button {
+  line-height: 2.604vw;
+  padding: 0 33px;
+
+  @include devices {
+    display: none;
+  }
+
+  &::after {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+.materials .button {
+  display: none;
+
+  @include devices {
+    display: block;
+    line-height: 3.2;
+    padding: 0 33px;
+    text-align: center;
+  }
+
+  @include xs {
+    margin: 0 20px;
+  }
+}
+
+.materials-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  @include devices {
+    grid-gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  @include xs {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0 20px;
+  }
+}
+
+@mixin grid-item-transition {
+  transition: .3s;
+}
+
+.materials-grid__item {
+  @include grid-item-transition;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.materials-grid__item img {
+  @include grid-item-transition;
+  display: block;
+  width: 100%;
+}
+
+.materials-item__name {
+  @include grid-item-transition;
+  background: rgba(0, 0, 0, .6);
+  bottom: 0;
+  font-size: 1.25vw;
+  justify-content: space-between;
+  line-height: 1.25vw;
+  max-width: 100%;
+  padding: 1.042vw;
+  position: absolute;
+  transform: translateY(100%);
+  transition: .3s;
+  width: 100%;
+
+  .article {
+    font-size: 16px;
+    opacity: .8;
+  }
+
+}
+
+.materials-grid__item:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.materials-grid__item:hover .materials-item__name {
+  transform: translateY(0);
+}
+
+.materials-grid__item:hover img {
+  filter: none;
+}
+
+.project-slide__item {
+  img {
+    width: 100vw;
+  }
+}
+
+.project-slide__name {
+  background: rgba(0, 0, 0, .6);
+  bottom: 0;
+  color: $light-grey;
+  font-size: 1.875vw;
+  font-weight: 200;
+  padding: 1.146vw 0;
+  position: absolute;
+  width: 100%;
+
+  @include devices {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  @include laptop {
+    padding: 12px 0;
+  }
+
+  a {
+    font-size: .938vw;
+    margin-top: 0;
+    text-align: center;
+    width: 19.271vw;
+
+    @include xs {
+      display: none;
+    }
+
+    @include devices {
+      font-size: 18px;
+      padding: 0 30px;
+      width: auto;
+    }
+  }
+
+  .center-container {
+    align-items: center;
+  }
+}
+
+.news-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include devices {
+    display: none;
+  }
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 20px;
+  margin-top: 0;
+  position: relative;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.news-img {
+  margin-bottom: 1.56vw;
+  overflow: hidden;
+
+  @include devices {
+    margin-bottom: 20px;
+    max-width: none;
+  }
+}
+
+.news-img img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: .5s;
+  width: 100%;
+
+  @include devices {
+    max-width: 100%;
+  }
+}
+
+.news:hover img {
+  transition: .5s ease;
+}
+
+.news-header {
+  font-size: 1.56vw;
+  line-height: 1.92vw;
+  margin-bottom: .52vw;
+
+
+  @include devices {
+    font-size: 1.04vw;
+    line-height: 1.25vw;
+    margin-bottom: .78vw;
+    padding-left: 0;
+  }
+
+  &::before {
+    display: none;
+  }
+}
+
+.news-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include devices {
+    margin-top: 1.04vw;
+    max-width: none;
+  }
+
+  @include xs {
+    padding: 0 20px;
+  }
+}
+
+.news-timestamp {
+  color: $light-grey;
+  font-family: $montserrat;
+  font-size: .93vw;
+  line-height: 1.13vw;
+  margin-bottom: 1.04vw;
+  opacity: .4;
+
+  @include devices {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: .78vw;
+  }
+}
+
+.slick-active button {
+  background: $logo-color;
+}
+
+.news-slider__wrapper .button {
+  display: none;
+  text-align: center;
+
+  @include devices {
+    display: block;
+  }
+
+  @include xs {
+    margin: 0 20px;
+  }
+}
+
+.news-slider {
+  display: none;
+
+  @include devices {
+    display: block;
+    margin-bottom: 4px;
+  }
+}

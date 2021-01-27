@@ -1,0 +1,17 @@
+@function max($numbers...) {
+  //noinspection CssInvalidFunction
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  //noinspection CssInvalidFunction
+  @return m#{i}n(#{$numbers});
+}
+
+@import '~@fancyapps/fancybox/dist/jquery.fancybox';
+
+.fancybox-toolbar .fancybox-button--play,
+.fancybox-toolbar .fancybox-button--thumbs {
+  display: none;
+}
+

@@ -1,0 +1,54 @@
+@import 'colors';
+
+.cursor {
+  background: $white;
+  border-radius: 50%;
+  color: $white;
+  display: none;
+  height: 25px;
+  pointer-events: none;
+  position: fixed;
+  width: 25px;
+  z-index: 99;
+
+  &.black {
+    background-color: $black;
+    color: $black;
+  }
+}
+
+.rz-cursor {
+  background: transparent;
+  border: 1px solid $white;
+  border-radius: 50%;
+  display: none;
+  height: 64px;
+  opacity: .5;
+  pointer-events: none;
+  position: fixed;
+  width: 64px;
+  z-index: 99;
+
+  &.black {
+    border-color: $black;
+  }
+}
+
+.cursor .chevron,
+.cursor .cross {
+  display: none;
+}
+
+.cursor__chevron .chevron {
+  display: block;
+}
+
+.cursor__cross .cross {
+  display: block;
+}
+
+.cursor__cross,
+.cursor__chevron {
+  background-color: transparent;
+  border-radius: 0;
+}

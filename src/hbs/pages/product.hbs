@@ -1,0 +1,160 @@
+{{#> layouts/base }}
+    {{#*inline "content-block"}}
+        {{> includes/header}}
+        <div class="main">
+            <ul class="mobile-breadcrumbs">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Решения</a></li>
+                <li><span>Натуральный камень</span></li>
+            </ul>
+            <div class="container row">
+                {{> includes/breadcrumb}}
+                <div class="right-column">
+                    <div class="parallax-banner parallax-banner--line">
+                        <h1 class="banner-header">Изделия</h1>
+                        <img class="zoom-image" src="../../media/products.png" alt="">
+                    </div>
+                    <div class="radiant-circle rellax" data-rellax-speed="-10"></div>
+                </div>
+            </div>
+            <div class="center-container center-container--margin">
+                <div class="header-block">
+                    <h2 class="marker" data-aos="gdp-slide-in-h2">
+                        <span>Каталог изделий</span>
+                    </h2>
+                    <a href="#" class="download hidden-xs"><i class="far fa-file-pdf"></i> Скачать каталог</a>
+                    <div class="mobile-filter visible-xs"></div>
+                </div>
+
+                <div class="filter-list">
+                    <div class="filter-list__name">Тип изделия</div>
+                    <div class="filter-list__property active" data-tab="table">Столы</div>
+                    <div class="filter-list__property" data-tab="interier">Предметы интерьера</div>
+                    <div class="filter-list__property" data-tab="sculpture">Скульптура</div>
+                    <div class="filter-list__property" data-tab="light">Освещение</div>
+                </div>
+
+                <div class="filter-action">
+                    <button class="filter-btn gold-button apply">Применить</button>
+                    <button class="filter-btn remove-filter">Сбросить фильтр</button>
+                </div>
+
+                <div class="sort-block row">
+                    <div class="selected">Подобрано 1 500 материалов</div>
+                    <div class="quantity visible-xs">1-36 из 1500</div>
+                    <div class="sort-block__right-part row">
+                        <div class="show">
+                            <span>Показывать по</span>
+                            <select class="custom-select" name="quantity">
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="60">80</option>
+                            </select>
+                        </div>
+                        <div class="quantity hidden-xs">1-15 из 1500</div>
+                        <div class="arrows row">
+                            <div class="prev disabled">
+                                <img src="../../media/small-btn.svg" alt="">
+                            </div>
+                            <div class="next">
+                                <img src="../../media/small-btn.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="products-radiant rellax" data-rellax-speed="-2"></div>
+                    <a href="#" class="products__item table" data-aos="fade-in" data-aos-offset="0" data-aos-delay="50">
+                        <img src="../../media/projects/5.png" alt="">
+                    </a>
+                    <a href="#" class="products__item sculpture" data-aos="fade-in" data-aos-offset="0" data-aos-delay="100">
+                        <img src="../../media/projects/6.png" alt="">
+                    </a>
+                    <a href="#" class="products__item light" data-aos="fade-in" data-aos-offset="0" data-aos-delay="150">
+                        <img src="../../media/projects/7.png" alt="">
+                    </a>
+                    <a href="#" class="products__item interier" data-aos="fade-in" data-aos-offset="0" data-aos-delay="200">
+                        <img src="../../media/projects/8.png" alt="">
+                    </a>
+                    <a href="#" class="products__item light" data-aos="fade-in" data-aos-offset="0" data-aos-delay="250">
+                        <img src="../../media/projects/9.png" alt="">
+                    </a>
+                    <a href="#" class="products__item table" data-aos="fade-in" data-aos-offset="0" data-aos-delay="300">
+                        <img src="../../media/projects/10.png" alt="">
+                    </a>
+                    <a href="#" class="products__item sculpture" data-aos="fade-in" data-aos-offset="0" data-aos-delay="350">
+                        <img src="../../media/projects/5.png" alt="">
+                    </a>
+                    <a href="#" class="products__item interier" data-aos="fade-in" data-aos-offset="0" data-aos-delay="400">
+                        <img src="../../media/projects/6.png" alt="">
+                    </a>
+                    <a href="#" class="products__item interier" data-aos="fade-in" data-aos-offset="0" data-aos-delay="450">
+                        <img src="../../media/projects/7.png" alt="">
+                    </a>
+                    <a href="#" class="products__item table" data-aos="fade-in" data-aos-offset="0" data-aos-delay="500">
+                        <img src="../../media/projects/8.png" alt="">
+                    </a>
+                    <a href="#" class="products__item light" data-aos="fade-in" data-aos-offset="0" data-aos-delay="550">
+                        <img src="../../media/projects/9.png" alt="">
+                    </a>
+                    <a href="#" class="products__item light" data-aos="fade-in" data-aos-offset="0" data-aos-delay="600">
+                        <img src="../../media/projects/10.png" alt="">
+                    </a>
+                </div>
+
+                <div class="sort-block row">
+                    <div class="selected">Подобрано 1 500 материалов</div>
+                    <button class="show-btn hidden-xs">
+                        <i class="far fa-plus-circle"></i>Загрузить еще 36
+                    </button>
+                    <div class="quantity visible-xs">1-15 из 1500</div>
+                    <div class="sort-block__right-part row">
+                        <div class="quantity hidden-xs">1-15 из 1500</div>
+                        <div class="show visible-xs">
+                            <span>Показывать по</span>
+                            <select class="custom-select" name="quantity">
+                              <option value="36">36</option>
+                              <option value="48">48</option>
+                              <option value="60">60</option>
+                            </select>
+                        </div>
+                        <div class="arrows row">
+                            <div class="prev disabled">
+                                <img src="../../media/small-btn.svg" alt="">
+                            </div>
+                            <div class="next">
+                                <img src="../../media/small-btn.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="download visible-xs"><i class="far fa-file-pdf"></i> Скачать каталог</a>
+              </div>
+            </div>
+
+        <div class="modal modal--filter animate__animated animate__fast">
+            <div class="modal-header row">
+                <div class="modal-header__title">
+                    Фильтр
+                </div>
+                <div class="close"></div>
+            </div>
+            <div class="modal-filter">
+                <div class="modal-filter-title">Тип изделия</div>
+                <div class="filter-property">
+                    <div class="filter-list__property" data-tab="table">Столы</div>
+                    <div class="filter-list__property" data-tab="interier">Предметы интерьера</div>
+                    <div class="filter-list__property" data-tab="sculpture">Скульптура</div>
+                    <div class="filter-list__property" data-tab="light">Освещение</div>
+                </div>
+                <div class="mobile-filter-action">
+                    <button class="filter-btn gold-button">Применить</button>
+                    <button class="filter-btn remove-filter">Сбросить фильтр</button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    {{/inline}}
+{{/layouts/base}}

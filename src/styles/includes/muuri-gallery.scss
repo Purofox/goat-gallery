@@ -1,0 +1,91 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+@import 'styles/helpers/fancy-import';
+
+.masonry {
+  margin: 2.083vw .26vw;
+  position: relative;
+}
+
+.masonry__item {
+  display: block;
+  height: 25vw;
+  margin: 5px;
+  overflow: hidden;
+  position: absolute;
+  width: 32.2vw;
+
+  @include devices {
+    height: 22.4vw;
+    width: 29.6vw;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+    width: 100%;
+  }
+}
+
+.masonry__item--small {
+  height: 18.75vw;
+  width: 24vw;
+
+  @include ultra-hd {
+    width: 24.09vw;
+  }
+
+  @include devices {
+    height: 34.667vw;
+    width: 46.133vw;
+  }
+}
+
+.masonry__item--big {
+  height: 37.5vw;
+  width: 48.5vw;
+
+  @include devices {
+    height: 70.933vw;
+    width: 94.667vw;
+  }
+
+  @include ultra-hd {
+    width: 48.3vw;
+  }
+}
+
+.gallery-info {
+  background: rgba(0, 0, 0, .6);
+  bottom: 0;
+  display: flex;
+  font-size: 1.25vw;
+  justify-content: space-between;
+  opacity: 0;
+  padding: 1.042vw;
+  position: absolute;
+  transition: .3s;
+  width: 100%;
+
+  @include devices {
+    display: none;
+  }
+
+  .date {
+    font-size: .833vw;
+  }
+}
+
+.masonry__item:hover {
+  img {
+    transform: scale(1.1) !important;
+    transition: .4s;
+  }
+
+  .gallery-info {
+    opacity: 1;
+    transition: .4s;
+  }
+}

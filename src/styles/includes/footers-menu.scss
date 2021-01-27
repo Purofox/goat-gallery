@@ -1,0 +1,90 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+
+.menu-column {
+  color: $logo-color;
+  font-size: 1.042vw;
+  line-height: 1.042vw;
+  list-style-image: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @include devices {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  li {
+    font-family: $montserrat;
+    margin-bottom: 1.042vw;
+    padding: 0;
+    position: relative;
+
+    @include devices {
+      margin-bottom: 20px;
+    }
+  }
+
+  a {
+    color: $logo-color;
+    display: block;
+    padding-left: 2.083vw;
+
+    @include devices {
+      padding-left: 40px;
+    }
+
+    @include xs {
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.menu-column li::before {
+  background: $logo-color;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: .521vw;
+  width: 1.354vw;
+
+  @include xs {
+    top: 7px;
+    width: 20px;
+  }
+}
+
+.menu-column__child {
+  font: .833vw $roboto;
+  list-style-image: none;
+  list-style-type: none;
+  margin: .521vw 0 0;
+  max-width: 300px;
+  padding: 0;
+
+  @include devices {
+    font-size: 14px;
+    max-width: 207px;
+  }
+
+  li {
+    margin-bottom: .521vw;
+
+    @include devices {
+      margin-bottom: 10px;
+    }
+  }
+
+  a {
+    color: $light-grey;
+    display: block;
+    opacity: .64;
+  }
+}
+
+.menu-column__child li::before {
+  content: none;
+}

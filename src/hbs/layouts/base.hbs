@@ -1,0 +1,61 @@
+{{!-- layouts/base.hbs --}}
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {{#if htmlWebpackPlugin.options.title}}
+        {{htmlWebpackPlugin.options.title}}
+      {{else}}
+        Base Page Title
+      {{/if}}
+    </title>
+    {{#> head-block}}
+      {{!-- Custom <head> content per page could be added. --}}
+    {{/head-block}}
+  </head>
+  <body class="loading">
+      <!--<div class="rz-cursor"></div>
+      <div class="cursor">
+          &lt;!&ndash;chevron&ndash;&gt;
+          &lt;!&ndash;TODO: make this svg animatable(separate on two polygons to dilute them on animation)&ndash;&gt;
+          <svg class="chevron" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+               viewBox="0 0 410.258 410.258" xml:space="preserve">
+            <polygon style="fill:currentColor;" points="144.206,0 112.206,24 248.052,205.129 112.206,386.258 144.206,410.258 298.052,205.129 "/>
+          </svg>
+          &lt;!&ndash;TODO: make cross svg&ndash;&gt;
+          <svg class="cross" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+               viewBox="0 0 410.258 410.258" xml:space="preserve">
+            <polygon style="fill:currentColor;" points="144.206,0 112.206,24 248.052,205.129 112.206,386.258 144.206,410.258 298.052,205.129 "/>
+          </svg>
+      </div>-->
+    {{#> content-block}}
+      {{!-- Hero content goes here. --}}
+    {{/content-block}}
+
+
+    {{#> footer-block}}
+      {{!--
+        The `includes/footer` partial is the default content,
+        but can be overridden.
+      --}}
+      {{> includes/footer }}
+    {{/footer-block}}
+
+    {{#> scripts-block}}
+      {{!-- Custom scripts per page can be added. --}}
+    {{/scripts-block}}
+    {{#> modals-block}}
+    {{!-- Custom scripts per page can be added. --}}
+    {{/modals-block}}
+    <div class="preloader">
+        <svg>
+            <rect x="25%" y="25%" class="outer" width="50%" height="50%" />
+            <rect x="32.6%" y="32.6%" class="medium" width="34.7%" height="34.7%" />
+            <rect x="38.2%" y="38.2%" class="inner" width="23.8%" height="23.8%" />
+        </svg>
+    </div>
+  </body>
+</html>

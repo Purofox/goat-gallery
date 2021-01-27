@@ -1,0 +1,147 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+@import 'footers-menu';
+
+.modal-header {
+  color: $logo-color;
+  font: 1.458vw $montserrat;
+  justify-content: space-between;
+  padding: 3.125vw 5.99vw 3.125vw 5.208vw;
+
+  @include xs {
+    font-size: 28px;
+    padding: 23px 30px;
+  }
+
+  .logo {
+    @include xs {
+      display: none;
+    }
+  }
+}
+
+.modal-body {
+  border-top: 1px solid rgba(225, 225, 225, .1);
+  padding: 5.23% 15.65%;
+
+  @include xs {
+    padding: 30px;
+  }
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(225, 225, 225, .1);
+  padding: 23px 0;
+}
+
+.modal-menu {
+  background: $body-color;
+  display: none;
+  height: 100vh;
+  overflow: auto;
+  position: fixed;
+  width: 100vw;
+  z-index: 20;
+
+  &.open-menu {
+    display: block;
+  }
+}
+
+.modal-menu li {
+  padding-left: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.modal-menu li::before {
+  content: none;
+
+  @include xs {
+    background: $logo-color;
+    content: '';
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: 10px;
+    width: 26px;
+  }
+}
+
+.menu-column__child li::before {
+  content: none;
+}
+
+.modal-menu .menu-column a {
+  font-size: 1.563vw;
+
+  @include xs {
+    font-size: 18px;
+  }
+}
+
+.modal-menu .menu-column__child a {
+  font-size: 1.042vw;
+
+  @include devices {
+    font-size: 14px;
+  }
+}
+
+.close {
+  background: url(~media/close.svg) no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  display: block;
+  height: 1.042vw;
+  margin-left: 3.333vw;
+  width: 1.042vw;
+
+  @include devices {
+    height: 20px;
+    margin-left: 64px;
+    width: 20px;
+  }
+}
+
+.lang-item {
+  color: $logo-color;
+  font: 1.042vw $montserrat;
+  margin-right: 1.406vw;
+
+  @include devices {
+    font-size: 20px;
+    margin-right: 27px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.lang {
+  @include xs {
+    justify-content: center;
+  }
+}
+
+.lang-item::after {
+  background: $logo-color;
+  content: '';
+  display: inline-block;
+  height: 1.042vw;
+  margin-left: 1.406vw;
+  width: 1px;
+
+  @include devices {
+    height: 20px;
+    margin-left: 27px;
+  }
+}
+
+.lang-item:last-child::after {
+  content: none;
+}

@@ -1,0 +1,114 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+@import 'styles/helpers/fancy-import';
+
+.text-area {
+  max-width: 45%;
+
+  @include devices {
+    max-width: 570px;
+  }
+
+  @include ipadpro {
+    max-width: 334px;
+  }
+
+  @include xs {
+    max-width: none;
+  }
+}
+
+.text-area p {
+  margin-bottom: 2.396vw;
+
+  @include xs {
+    margin-bottom: 30px;
+    padding-left: 60px;
+  }
+}
+
+.description {
+  margin-top: 4.167vw;
+  max-width: 70%;
+
+  @include xs {
+    margin-top: 30px;
+    max-width: none;
+    padding: 0 20px;
+  }
+
+  @include tablet {
+    margin-top: 30px;
+    max-width: 95%;
+  }
+}
+
+.project-slide__item {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+}
+
+
+
+.project-slide__name {
+  background: rgba(0, 0, 0, .6);
+  bottom: 0;
+  color: $light-grey;
+  font-size: 1.875vw;
+  font-weight: 200;
+  padding: 1.146vw 0;
+  position: absolute;
+  width: 100%;
+
+  @include devices {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  @include laptop {
+    padding: 12px 0;
+  }
+
+  a {
+    font-size: .938vw;
+    margin-top: 0;
+    text-align: center;
+    width: 19.271vw;
+
+    @include xs {
+      display: none;
+    }
+
+    @include devices {
+      font-size: 18px;
+      padding: 0 30px;
+      width: auto;
+    }
+  }
+
+  .center-container {
+    align-items: center;
+  }
+}
+
+.btn-link--exception {
+  span {
+    position: relative;
+    z-index: 3;
+  }
+
+  &::after {
+    z-index: 1;
+  }
+}
+
+.btn-link {
+  @include xs {
+    margin: 20px auto 0;
+    max-width: 336px;
+  }
+}

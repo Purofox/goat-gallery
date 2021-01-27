@@ -1,0 +1,89 @@
+@import '../helpers/breakpoints';
+@import '../helpers/colors';
+@import '../helpers/fonts';
+
+.parallax-banner {
+  margin-bottom: 4.167vw;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @include devices {
+    margin-bottom: 0;
+  }
+
+  @include xs {
+    height: 375px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.parallax-banner--line::after {
+  background: $light-grey;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 1px);
+  width: 54%;
+
+  @include xs {
+    width: 45%;
+  }
+}
+
+.radiant-circle {
+  background: $radial-gradient;
+  bottom: -8.073vw;
+  height: 46.875vw;
+  left: 5.469vw;
+  opacity: .25;
+  position: absolute;
+  width: 46.875vw;
+  z-index: -1;
+
+  @include devices {
+    display: none;
+  }
+
+  @include laptop {
+    bottom: -50px;
+    height: 700px;
+    width: 700px;
+  }
+}
+
+.banner-header {
+  color: $light-grey;
+  font: 200 5vw $montserrat;
+  left: 7.5vw;
+  margin: 0;
+  max-width: 40.625vw;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  @include xs {
+    left: 20px;
+  }
+
+  @include devices {
+    font-size: 32px;
+    line-height: 39px;
+  }
+
+  @include laptop {
+    font-size: 72px;
+  }
+}

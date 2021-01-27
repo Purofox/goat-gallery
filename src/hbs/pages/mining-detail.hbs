@@ -1,0 +1,63 @@
+{{#> layouts/base }}
+    {{#*inline "content-block"}}
+        {{> includes/header}}
+        <div class="main mining-detail">
+            <ul class="mobile-breadcrumbs">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Решения</a></li>
+                <li><span>Натуральный камень</span></li>
+            </ul>
+            <div class="container row">
+                {{> includes/breadcrumb}}
+                <div class="right-column">
+                    <div class="parallax-slider">
+                        <div class="parallax-slider__item">
+                            <h1 class="banner-header">Marmi Valmalenco</h1>
+                            <img class="zoom-image" src="../../media/mining/mining-banner.png" alt="">
+                        </div>
+                        <div class="parallax-slider__item">
+                            <img class="zoom-image" src="../../media/mining/mining-banner.png" alt="">
+                        </div>
+                    </div>
+                    <div class="radiant-circle rellax" data-rellax-speed="-10"></div>
+                </div>
+            </div>
+            <div class="container row">
+                <div class="left-column"></div>
+                <div class="right-column">
+                    <h2 class="marker short-title" data-aos="gdp-slide-in-h2">
+                        <span>Добро пожаловать</span>
+                        <span>в мир природного камня</span>
+                    </h2>
+                    <div class="preview-text" data-aos="fade-up" data-aos-delay="300" data-aos-offset="100">
+                        Всем этим качествам соответствует только один вид материалов – натуральный камень. Поэтому сам бассейн и его околобассейнные зоны облицовывают плиткой из натурального камня, реже мозаикой или мозаичным панно из природного камня. Подобрав более подходящий каменьпо цвету, фактуре неординарности природных узоров можно добиться невероятного эффекта, который будет наиболее отчетлив и ярко выражен, когда природный камень будет смочен водой.
+                    </div>
+                    <div class="row">
+                        <div class="text-area" data-aos="fade-up" data-aos-delay="300" data-aos-offset="100">
+                            <h3 class="text-area__title">Естественное желание камня – стать воплощением ваших идей</h3>
+                            <p>
+                                Камень, уважаемый и ценный в своих структурных и эстетических качествах, каждый раз переосмысливается, принимая во внимание его прямую связь с другими элементами. Процессы оптимизированы, а продукты персонализированы в соответствии с потребностями наших клиентов. Получающиеся первоклассные продукты сочетают традиции и опыт с самыми инновационными технологиями.
+                            </p>
+                            <h3 class="text-area__title">Да, с этим камнем вы сможете!</h3>
+                            <p>Благодаря мастерству своей технической команды и многолетнему опыту, Marmi Valmalenco специализируется на выполнении проектов высокого качества. Каждый продукт полностью самодельный, в процессе, характеризующемся постоянным контролем качества, ориентированным на камень - сырье - на его обработку и отделку, с целью воплощения в реальность ваших дизайнерских идей.</p>
+                        </div>
+                        {{> includes/example-slider}}
+                    </div>
+                </div>
+            </div>
+
+            {{> includes/materials-tabs}}
+
+            {{> includes/finishing-options title="Варианты финишной обработки"}}
+
+            <div class="center-container center-container--margin">
+                <h3 data-aos="gdp-without-marker-h3">
+                    <span>Проекты с материалами карьера</span>
+                </h3>
+                {{> includes/projects}}
+            </div>
+
+            {{> includes/bottom-navigation}}
+        </div>
+    {{/inline}}
+{{/layouts/base}}

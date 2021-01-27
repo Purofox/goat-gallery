@@ -1,0 +1,228 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+
+.header {
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+
+  @include devices {
+    position: inherit;
+  }
+
+}
+
+.header-container {
+  justify-content: space-between;
+  padding: 3.12% 5.88% 0 5.2%;
+  width: 100vw;
+
+  @include xs {
+    padding: 15px 20px;
+  }
+
+  @include tablet {
+    padding: 25px 37px 5px 26px;
+  }
+
+  @include ipadpro {
+    padding: 34px 53px 0 34px;
+  }
+
+  @include devices {
+    align-items: center;
+  }
+
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  pointer-events: all;
+
+  @include xs {
+    align-items: center;
+    flex-direction: row;
+    flex-grow: 1;
+  }
+}
+
+.logo img:first-child {
+  height: 3.333vw;
+  margin-bottom: 1.042vw;
+  width: 3.333vw;
+
+  @include xs {
+    height: 35px;
+    margin-bottom: 0;
+    width: 35px;
+  }
+
+  @include tablet {
+    width: 40px;
+  }
+
+  @include laptop {
+    width: 50px;
+  }
+}
+
+.logo img:last-child {
+  width: 5.677vw;
+
+  @include xs {
+    margin: auto;
+    width: 59px;
+  }
+
+  @include tablet {
+    width: 46px;
+  }
+
+  @include laptop {
+    width: 80px;
+  }
+}
+
+.menu-side {
+  align-items: center;
+  height: 2.448vw;
+
+  @include devices {
+    height: auto;
+  }
+}
+
+.main-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include devices {
+    display: none;
+  }
+}
+
+.main-menu__item {
+  font: 300 .938vw $montserrat;
+  line-height: 1.146vw;
+  margin: 0 .26vw 0 0;
+  position: relative;
+
+  @include laptop {
+    padding: 12px 5px;
+  }
+}
+
+.main-menu__item a {
+  padding: .625vw .521vw;
+  position: relative;
+
+
+  &::before {
+    background-color: transparent;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 1px;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    transition: width .5s ease-in-out;
+    width: 0;
+
+    @include devices {
+      content: none;
+    }
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: $logo-color;
+    transition: .5s ease-in-out;
+    width: 100%;
+  }
+}
+
+.main-menu:hover .main-menu__item:not(:hover) a::before {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: .3s ease-in-out;
+}
+
+.main-menu__item.active a::before {
+  background-color: $logo-color;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transition: .5s ease-in-out;
+  width: 100%;
+}
+
+.main-menu__item.active::after {
+  border: 1.25vw solid transparent;
+  border-top-color: $logo-color;
+  content: '';
+  left: 50%;
+  position: absolute;
+  top: -3.7vw;
+  transform: translateX(-50%);
+
+  @include laptop {
+    border: 20px solid transparent;
+    border-top-color: $logo-color;
+    top: -45px;
+  }
+}
+
+.modal-menu-btn {
+  background: url(~media/menu.svg) no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  display: block;
+  height: 1.25vw;
+  margin-left: 3.229vw;
+  pointer-events: all;
+  width: 1.25vw;
+
+  @include devices {
+    height: 18px;
+    width: 24px;
+  }
+
+  @include xs {
+    margin-left: 0;
+  }
+
+  @include laptop {
+    margin-left: 42px;
+  }
+}
+
+.logo img:last-child,
+.main-menu {
+  opacity: 1;
+  transition: .3s;
+}
+
+.sticky {
+  pointer-events: none;
+
+  .logo img:last-child,
+  .main-menu {
+    opacity: 0;
+    transition: .3s;
+  }
+
+  .main-menu {
+    display: none;
+  }
+}

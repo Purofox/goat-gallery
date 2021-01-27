@@ -1,0 +1,65 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+@import 'styles/helpers/fancy-import';
+
+.example-slider {
+  margin: 0 7.813vw;
+  width: 40%;
+
+  @include devices {
+    margin: 0;
+    width: 100%;
+  }
+
+  @include tablet {
+    max-width: 576px;
+  }
+
+  @include ipadpro {
+    margin-left: 30px;
+    max-width: 384px;
+  }
+
+  @include laptop {
+    margin: 0 70px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.radiant-example {
+  background: $radial-gradient;
+  height: 35.573vw;
+  opacity: .25;
+  position: absolute;
+  right: 7.813vw;
+  top: -36.458vw;
+  width: 35.573vw;
+  z-index: -1;
+
+  @include devices {
+    display: none;
+  }
+
+  @include laptop {
+    height: 550px;
+    right: 0;
+    width: 550px;
+  }
+}
+
+.example-slider__item {
+  max-height: 24.427vw;
+
+  @include devices {
+    max-height: 435px;
+  }
+}
+
+.slick-active button {
+  background: $logo-color;
+  border: 1px solid $logo-color;
+}

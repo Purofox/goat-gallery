@@ -1,0 +1,97 @@
+@import '../helpers/breakpoints';
+@import '../helpers/colors';
+@import '../helpers/fonts';
+
+/* stylelint-disable*/
+.select2 {
+  margin: 0 1.042vw 0 .677vw;
+
+  @include devices {
+    margin: 0 20px 0 13px;
+  }
+}
+
+.select2-container--default .select2-selection--single {
+  background: transparent;
+  border-color: rgba(191, 154, 134, .4);
+  border-radius: 0;
+  height: 1.458vw;
+  outline: none;
+
+  @include devices {
+    height: 32px;
+  }
+
+  @include laptop {
+    height: 32px;
+  }
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  color: $logo-color;
+  line-height: 1.4vw;
+  width: 2.813vw;
+
+  @include devices {
+    line-height: 32px;
+    width: 54px;
+  }
+
+  @include laptop {
+    line-height: 28px;
+    width: 54px;
+  }
+}
+
+.select2-dropdown {
+  background: $body-color;
+  border-color: rgba(191, 154, 134, .4);
+  border-radius: 0;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background: transparent;
+  color: $logo-color;
+}
+
+.select2-results__option {
+  color: $light-grey;
+  margin: 0;
+  padding: 0 .469vw;
+
+  @include devices {
+    padding: 0 9px;
+  }
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background: $logo-color;
+  color: $light-grey;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  background: url(../../media/small-btn.svg) no-repeat center;
+  background-size: contain;
+  bottom: 0;
+  height: .521vw;
+  margin: auto;
+  right: .521vw;
+  top: 0;
+  transform: rotate(90deg);
+  width: .260vw;
+
+  @include devices {
+    height: 10px;
+    right: 10px;
+    width: 5px;
+  }
+}
+
+.select2-container--default.select2-container--open .select2-selection__arrow {
+  transform: rotate(-90deg);
+}
+
+.select2-selection--single .select2-selection__arrow b {
+  display: none;
+}
+/* stylelint-enable*/

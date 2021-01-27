@@ -1,0 +1,35 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+
+.text-main {
+  margin-top: 4.844vw;
+
+  @include xs {
+    margin-top: 0;
+  }
+}
+
+.text-container {
+  margin-bottom: 5.208vw;
+  max-width: 55.99vw;
+
+  @include tablet {
+    margin-bottom: 50px;
+    max-width: 85%;
+  }
+
+  @include xs {
+    margin-bottom: 50px;
+    max-width: none;
+    padding: 0 20px;
+  }
+
+  p {
+    margin-bottom: 20px;
+
+    @include devices {
+      margin-bottom: 10px;
+    }
+  }
+}

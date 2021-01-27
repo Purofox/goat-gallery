@@ -1,0 +1,104 @@
+@import 'styles/helpers/colors';
+
+.loading {
+  overflow: hidden;
+}
+
+$animation-duration: 4s;
+
+$preloader-transition-delay: .6s;
+$preloader-transition: .4s;
+
+:root {
+  --preloader-animate: #{$preloader-transition-delay + $preloader-transition};
+}
+
+.preloader {
+  align-items: center;
+  background: $black;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+
+  svg {
+    animation: zoom $animation-duration/2 linear infinite;
+    fill: transparent;
+    height: 60px;
+    stroke: $logo-color;
+    stroke-width: 2;
+    width: 60px;
+  }
+
+  .outer,
+  .medium,
+  .inner {
+    animation-duration: $animation-duration;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: center;
+  }
+
+  .outer,
+  .inner {
+    animation-name: left;
+    transform: rotate(45deg);
+  }
+
+  .medium {
+    animation-name: right;
+  }
+}
+
+.loaded__hiding {
+  .preloader {
+    transform: translateY(100%);
+    transition: transform $preloader-transition linear;
+    transition-delay: $preloader-transition-delay;
+  }
+
+  svg {
+    opacity: 0;
+    transition: opacity $preloader-transition-delay linear;
+  }
+}
+
+@keyframes left {
+  from {
+    transform: rotate(45deg);
+  }
+
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes right {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(.75);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(.75);
+  }
+}
+
+

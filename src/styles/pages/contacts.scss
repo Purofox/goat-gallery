@@ -1,0 +1,194 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+@import 'styles/helpers/fancy-import';
+
+.contacts-container {
+  margin: 4.688vw auto 5.208vw;
+  width: 67.188vw;
+
+  @include devices {
+    margin: 0 auto 30px;
+    width: 100%;
+  }
+}
+
+.center-header {
+  color: $light-grey;
+  font-size: 5vw;
+  margin-left: 5.938vw;
+  max-width: 45.938vw;
+  text-transform: uppercase;
+
+  @include devices {
+    color: $white;
+    font-size: 28px;
+    font-weight: 300;
+    margin: 30px 0 50px 20px;
+    max-width: 287px;
+    text-transform: initial;
+  }
+}
+
+.center-header::after {
+  background: $light-grey;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  top: 17.5vw;
+  width: 46%;
+
+  @include tablet {
+    top: 15.625vw;
+  }
+
+  @include ipadpro {
+    top: 12.625vw;
+  }
+
+  @include xs {
+    top: 137px;
+  }
+}
+
+.contacts-row {
+  margin-top: 150px;
+
+  @include devices {
+    margin-top: 0;
+  }  
+  
+  @include devices {
+    margin-bottom: 50px;
+  }
+  
+  &:last-of-type {
+    @include devices {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.contacts-description p {
+  margin-bottom: 32px;
+
+  @include devices {
+    margin-bottom: 20px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+
+    @include devices {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.contacts-row .wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  @include devices {
+    flex-direction: column;
+
+    .header {
+      order: 1;
+    }
+    
+    .contacts-description {
+      order: 2;
+    }
+  
+    .contacts-img {
+      order: 3;
+    }
+  }
+
+  @include ipadpro {
+    flex-direction: row;
+  }
+}
+
+.contacts-img {
+  order: 2;
+  overflow: hidden;
+  width: 44.792vw;
+
+  @include devices {
+    width: auto;
+  }
+}
+
+.contacts-img img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+
+  @include devices {
+    max-width: 100%;
+  }
+}
+
+.contacts-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 27.344vw;
+
+  @include devices {
+    display: block;
+    flex-direction: unset;
+    justify-content: unset;
+    max-width: none;
+    order: 2;
+    padding: 0 20px;
+  }
+
+  @include xs {
+    padding-left: 60px;
+    padding-right: 20px;
+  }
+}
+
+.contacts-row:nth-child(odd) .wrapper {
+  flex-direction: row-reverse;
+
+  @include devices {
+    flex-direction: column;
+  }
+
+  @include ipadpro {
+    flex-direction: row;
+  }
+
+  .btn-link--small {
+    margin-left: auto;
+  }
+}
+
+.desktop-header {
+  margin-bottom: 50px;
+
+  @include devices {
+    display: none;
+  }
+}
+
+.mobile-header {
+  display: none;
+  max-width: none;
+
+  @include devices {
+    display: block;
+  }
+
+  @include tablet {
+    padding-left: 20px;
+  }
+}

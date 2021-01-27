@@ -1,0 +1,37 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+
+.products-grid {
+  display: grid;
+  grid-gap: 1.042vw;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+
+  @include devices {
+    grid-gap: 10px;
+  }
+
+  @include xs {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10px;
+  }
+}
+
+.products-grid-item {
+  overflow: hidden;
+}
+
+.products-grid img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: .5s;
+  width: 100%;
+}
+
+.products-grid-item:hover img {
+  transform: scale(1.1);
+  transition: .5s;
+}

@@ -1,0 +1,14 @@
+{{!-- includes/breadcrumb.hbs --}}
+<div class="left-column">
+    <div class="breadcrumb flag">
+        <div class="breadcrumb-rotate">
+            <a href="#">
+                {{#if htmlWebpackPlugin.options.breadcrumbsLeft}}
+                {{htmlWebpackPlugin.options.breadcrumbsLeft}}
+                {{else}}
+                Base Page Title
+                {{/if}}
+            </a>
+         </div>
+     </div>
+</div>

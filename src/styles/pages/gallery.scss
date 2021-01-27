@@ -1,0 +1,63 @@
+@import 'styles/helpers/breakpoints';
+@import 'styles/helpers/colors';
+@import 'styles/helpers/fonts';
+@import 'styles/helpers/fancy-import';
+
+
+.center-container--header {
+  margin: 0 auto 8.333vw;
+
+  @include devices {
+    margin: 0 auto 50px;
+  }
+}
+
+.center-header {
+  color: $light-grey;
+  font-size: 5vw;
+  margin: 4.844vw 0 0 10.5vw;
+  max-width: 45.938vw;
+  text-transform: uppercase;
+
+  @include laptop {
+    font-size: 72px;
+    margin-left: 100px;
+  }
+
+  @include devices {
+    color: $white;
+    font-size: 28px;
+    font-weight: 300;
+    margin: 10px 0 0;
+    max-width: 287px;
+  }
+
+  @include xs {
+    margin: 10px 0 0 20px;
+    text-transform: inherit;
+  }
+}
+
+.center-header::after {
+  background: $light-grey;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  top: 17.448vw;
+  width: 46%;
+
+  @include laptop {
+    top: 300px;
+  }
+
+  @include tablet {
+    top: 160px;
+  }
+
+  @include xs {
+    top: 130px;
+  }
+}
+
